@@ -4,11 +4,17 @@
   "description": "Exemplo de utilização do método intercept",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=false,json=true && npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json    "
   },
   "author": "ernestosbarbosa",
   "license": "ISC",
   "dependencies": {
     "cypress": "^8.7.0"
+  },
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

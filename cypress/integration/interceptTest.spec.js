@@ -32,6 +32,7 @@ describe('Product Search', () => {
   it('autocomplete product item should be return correctly', () => {
     homePage.searchMagnifier()
     productSearchPage.search('Jacket')
-    productSearchPage.productList.first().should('have.attr', 'title', 'Ingrid Running Jacket')
+    productSearchPage.productList.first()
+    .should('have.attr', 'title', 'Ingrid Running Jacket')
   })
 })
